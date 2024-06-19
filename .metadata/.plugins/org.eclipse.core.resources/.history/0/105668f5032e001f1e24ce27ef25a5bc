@@ -1,0 +1,14 @@
+package core;
+class A{
+	int i;
+	public void call() {
+			System.out.println("call function in A class");	
+	}
+}
+public class P003_UserInput {
+	public static void main(String[] args) {
+		System.out.println("main class");
+		A obj = new A();
+		obj.call();
+	}
+}

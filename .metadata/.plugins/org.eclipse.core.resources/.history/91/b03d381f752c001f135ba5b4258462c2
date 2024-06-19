@@ -1,0 +1,8 @@
+package core;
+//1.Primitive(byte,short,int,long,float,double,boolean,char)
+//2.non-primitive(array,String,class)
+public class P002_DataType {
+	public static void main(String[] args) {
+		byte var_name = 12;
+	}
+}

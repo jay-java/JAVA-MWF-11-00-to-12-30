@@ -1,0 +1,31 @@
+package core;
+
+//1.simple if
+//2.if else
+//	3.nested if
+//	4.else if ladder
+//	5.switch case
+public class P005_ConditionalStatements {
+	public static void main(String[] args) {
+		int i =3,j=2;
+		if(i>j) {
+			System.out.println("i is greater than j");
+		}
+		
+		if(i>j) {
+			System.out.println("i is greater than j");
+		}
+		else {
+			System.out.println("j is grater than i");
+		}
+		
+		int age = 34;
+		if(age>18) {
+			
+		}
+		else {
+			System.out.println("age is less than 18");
+		}
+		
+	}
+}
