@@ -1,0 +1,12 @@
+package core;
+
+public class P010_String {
+	public static void main(String[] args) {
+		String s = "java";
+		String s1 = "tech";
+		System.out.println(s.concat(s1));
+//		StringBuffer s1 = new StringBuffer("java");
+//		s1.append(" tech");
+//		System.out.println(s1);
+	}
+}

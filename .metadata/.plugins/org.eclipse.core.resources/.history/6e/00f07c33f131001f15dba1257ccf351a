@@ -1,0 +1,16 @@
+package core;
+class Data{
+	Data(){
+		System.out.println("default cons");
+	}
+	public Data call() {
+		System.out.println("call function");
+		return "";
+	}
+}
+public class P012_Constructor {
+	public static void main(String[] args) {
+		Data d1 = new Data();
+		d1.call();
+	}
+}

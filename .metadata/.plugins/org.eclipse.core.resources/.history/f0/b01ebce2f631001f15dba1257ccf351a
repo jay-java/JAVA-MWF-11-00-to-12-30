@@ -1,0 +1,12 @@
+package core;
+class A{
+	
+}
+class B extends A{
+	
+}
+public class P013_Inheritance {
+	public static void main(String[] args) {
+		
+	}
+}

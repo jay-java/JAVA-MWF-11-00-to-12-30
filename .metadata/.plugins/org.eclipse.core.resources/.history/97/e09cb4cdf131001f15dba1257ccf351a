@@ -1,0 +1,21 @@
+package core;
+class Data{
+	int a;
+	String name;
+	long contact;
+	Data(){
+		System.out.println("default cons");
+	}
+	Data(int id){
+		
+	}
+	public void call() {
+		System.out.println("call function");
+	}
+}
+public class P012_Constructor {
+	public static void main(String[] args) {
+		Data d1 = new Data();
+		d1.call();
+	}
+}

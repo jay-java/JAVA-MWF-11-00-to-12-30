@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="org.eclipse.draw2d:3.20.0.202405290843"/>
+		<item value="org.eclipse.gef:3.20.0.202405290843"/>
+		<item value="org.eclipse.mylyn.commons.feature:4.3.0.v20240602-0603"/>
+		<item value="org.eclipse.mylyn.commons.notifications.feature:4.3.0.v20240602-0603"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.34.0.v202404170147"/>
+	</list>
+</section>

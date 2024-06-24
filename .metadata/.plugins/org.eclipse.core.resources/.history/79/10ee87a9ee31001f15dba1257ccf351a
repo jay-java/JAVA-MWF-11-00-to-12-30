@@ -1,0 +1,12 @@
+package core;
+class Student{
+	int id;
+	String name;
+	String address;
+	static String College_name = "TOPS";
+}
+public class P011_StaticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}
