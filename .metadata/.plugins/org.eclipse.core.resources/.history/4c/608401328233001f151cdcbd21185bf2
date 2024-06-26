@@ -1,0 +1,9 @@
+package core;
+class Employee{
+	
+}
+public class P016_Encapsulation {
+	public static void main(String[] args) {
+		
+	}
+}

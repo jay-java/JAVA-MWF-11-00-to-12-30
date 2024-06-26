@@ -1,0 +1,14 @@
+package core;
+class ABC{
+	final int i = 12;
+	public void chagne() {
+//		i++;
+		System.out.println("i = "+i);
+	}
+}
+public class P017_Final {
+	public static void main(String[] args) {
+		ABC a = new ABC();
+		a.chagne();
+	}
+}

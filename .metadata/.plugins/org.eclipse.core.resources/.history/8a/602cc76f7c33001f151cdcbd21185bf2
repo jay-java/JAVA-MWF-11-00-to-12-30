@@ -1,0 +1,22 @@
+package core;
+
+//Poly-Many
+//morphism - Forms
+//method - having diff forms
+class Laptop {
+	public void dell() {
+		System.out.println("dell laptop");
+	}
+	public void dell() {
+
+	}
+	public void dell() {
+
+	}
+}
+
+public class P014_Polymorphism {
+	public static void main(String[] args) {
+
+	}
+}

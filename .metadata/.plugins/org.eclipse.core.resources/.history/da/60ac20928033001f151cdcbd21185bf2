@@ -1,0 +1,11 @@
+package core;
+
+class RBI{
+	public void SA();
+	public void HL();
+}
+public class P015_Abstraction {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,57 @@
+package core;
+
+abstract class RBI{
+	abstract public void SA();
+	abstract public void HL();
+	
+}
+class SBI extends RBI{
+
+	@Override
+	public void SA() {
+		// TODO Auto-generated method stub
+		System.out.println("SA interest : 5%");
+	}
+
+	@Override
+	public void HL() {
+		// TODO Auto-generated method stub
+		System.out.println("SBI HL : 7%");
+	}
+	
+}
+class PNB extends RBI{
+
+	@Override
+	public void SA() {
+		// TODO Auto-generated method stub
+		System.out.println("PNB SA : 7%");
+	}
+
+	@Override
+	public void HL() {
+		// TODO Auto-generated method stub
+		System.out.println("PNB HL : 8%");
+	}
+	
+}
+class JAVA extends RBI{
+
+	@Override
+	public void SA() {
+		// TODO Auto-generated method stub
+		System.out.println("JAVA SA : 8%");
+	}
+
+	@Override
+	public void HL() {
+		// TODO Auto-generated method stub
+		System.out.println("JAVA HL : 9%");
+	}
+	
+}
+public class P015_Abstraction {
+	public static void main(String[] args) {
+		
+	}
+}

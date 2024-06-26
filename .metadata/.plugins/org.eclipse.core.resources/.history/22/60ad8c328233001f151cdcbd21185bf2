@@ -1,0 +1,12 @@
+package core;
+class Employee{
+	int id;
+	String name;
+	long contact;
+	double salary;
+}
+public class P016_Encapsulation {
+	public static void main(String[] args) {
+		
+	}
+}
