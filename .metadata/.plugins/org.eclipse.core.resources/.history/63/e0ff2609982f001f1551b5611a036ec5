@@ -1,7 +1,0 @@
-package core;
-
-public class P009_MultiArray {
-	public static void main(String[] args) {
-		int i[][] = {};
-	}
-}

@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="core.Data"/>
     <fullyQualifiedTypeName name="core.B"/>
     <fullyQualifiedTypeName name="core.C"/>
+    <fullyQualifiedTypeName name="core.Laptop"/>
+    <fullyQualifiedTypeName name="core.Child"/>
+    <fullyQualifiedTypeName name="core.SBI"/>
+    <fullyQualifiedTypeName name="core.PNB"/>
+    <fullyQualifiedTypeName name="core.JAVA"/>
+    <fullyQualifiedTypeName name="core.Employee"/>
+    <fullyQualifiedTypeName name="core.ABC"/>
+    <fullyQualifiedTypeName name="core.IntefaceCall"/>
+    <fullyQualifiedTypeName name="core.inter3"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

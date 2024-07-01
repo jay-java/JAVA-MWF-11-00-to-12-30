@@ -11,13 +11,14 @@ class Data{
 		System.out.println(a);
 	}
 	Data(int a,String name,long contact){
-		this.a= a;
+		System.out.println("cons : a = : "+a+" name : "+name+" contact : "+contact);
+		this.a= a ;
 		this.name=name;
 		this.contact=contact;
 		
 	}
 	public void call() {
-		System.out.println("a : "+a+" name: "+name+" contact : "+contact);
+		System.out.println("call method : a : "+a+" name: "+name+" contact : "+contact);
 	}
 	
 }

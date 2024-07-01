@@ -1,13 +1,20 @@
 package core;
 
-abstract class RBI{
+abstract class RBI {
 	abstract public void SA();
+
 	abstract public void HL();
+
+	public void call() {
+		System.out.println("call");
+	}
+
 	public static void RepoRate() {
 		System.out.println("repo rate : +-4%");
 	}
 }
-class SBI extends RBI{
+
+class SBI extends RBI {
 
 	@Override
 	public void SA() {
@@ -20,9 +27,10 @@ class SBI extends RBI{
 		// TODO Auto-generated method stub
 		System.out.println("SBI HL : 7%");
 	}
-	
+
 }
-class PNB extends RBI{
+
+class PNB extends RBI {
 
 	@Override
 	public void SA() {
@@ -35,9 +43,10 @@ class PNB extends RBI{
 		// TODO Auto-generated method stub
 		System.out.println("PNB HL : 8%");
 	}
-	
+
 }
-class JAVA extends RBI{
+
+class JAVA extends RBI {
 
 	@Override
 	public void SA() {
@@ -50,8 +59,9 @@ class JAVA extends RBI{
 		// TODO Auto-generated method stub
 		System.out.println("JAVA HL : 9%");
 	}
-	
+
 }
+
 public class P015_Abstraction {
 	public static void main(String[] args) {
 		SBI s = new SBI();

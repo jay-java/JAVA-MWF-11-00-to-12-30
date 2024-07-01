@@ -1,7 +1,0 @@
-package core;
-
-public class P003_UserInput {
-	public static void main(String[] args) {
-		
-	}
-}
