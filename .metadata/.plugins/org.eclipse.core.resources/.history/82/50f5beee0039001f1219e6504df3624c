@@ -1,0 +1,11 @@
+package core;
+//FileOUtputStream->to write data into file
+//FileINputStream->to read data from file
+//FileWriter-> to write
+//FileReader-> to read
+public class P020_FileHandling {
+	public static void main(String[] args) {
+		String msg = "java is very powerful language for web development";
+		
+	}
+}

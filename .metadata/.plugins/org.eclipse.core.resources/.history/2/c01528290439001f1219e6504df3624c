@@ -1,0 +1,16 @@
+package core;
+
+class Employe{
+	private int id;
+ 	private String name;
+	private long contact;
+	private String address;
+	Employe(){
+		
+	}
+}
+public class P021_Searialization {
+	public static void main(String[] args) {
+		
+	}
+}

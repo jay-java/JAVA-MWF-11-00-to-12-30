@@ -1,0 +1,10 @@
+package core;
+
+class Employe{
+	
+}
+public class P021_Searialization {
+	public static void main(String[] args) {
+		
+	}
+}

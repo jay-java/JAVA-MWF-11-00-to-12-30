@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;core.P021_Searialization&apos; to &apos;P021_Serialization&apos;&#x0D;&#x0A;- Original project: &apos;CoreJAVA&apos;&#x0D;&#x0A;- Original element: &apos;core.P021_Searialization&apos;&#x0D;&#x0A;- Renamed element: &apos;core.P021_Serialization&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;P021_Searialization&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;core{P021_Searialization.java[P021_Searialization" matchStrategy="1" name="P021_Serialization" qualified="false" references="true" similarDeclarations="false" stamp="1719987690704" textual="false" version="1.0"/>
+</session>

@@ -2,6 +2,8 @@ package core;
 
 public class P010_String {
 	public static void main(String[] args) {
+		char[] new_name = {'j','a','v','a'};
+		System.out.println(new_name);
 		String s = "java technology";
 		String s1 = "tech";
 		System.out.println(s.concat(s1));

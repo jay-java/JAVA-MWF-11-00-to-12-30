@@ -1,9 +1,0 @@
-package core;
-class Data{
-	
-}
-public class P012_Constructor {
-	public static void main(String[] args) {
-		
-	}
-}
