@@ -45,6 +45,15 @@ class IntefaceCall implements inter2, inter3 {
 	}
 
 }
+class aaa implements inter1{
+
+	@Override
+	public void interface1() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
 
 public class P018_Interface {
 	public static void main(String[] args) {

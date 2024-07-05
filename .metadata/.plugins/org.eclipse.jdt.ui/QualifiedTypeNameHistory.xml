@@ -10,12 +10,21 @@
     <fullyQualifiedTypeName name="core.SBI"/>
     <fullyQualifiedTypeName name="core.PNB"/>
     <fullyQualifiedTypeName name="core.JAVA"/>
-    <fullyQualifiedTypeName name="core.Employee"/>
     <fullyQualifiedTypeName name="core.ABC"/>
     <fullyQualifiedTypeName name="core.IntefaceCall"/>
     <fullyQualifiedTypeName name="core.inter3"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="core.Divide"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="core.Employee"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="core.Employe"/>
 </qualifiedTypeNameHistroy>

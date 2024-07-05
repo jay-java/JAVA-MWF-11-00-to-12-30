@@ -1,9 +1,0 @@
-package core;
-class ABC{
-	
-}
-public class P017_Final {
-	public static void main(String[] args) {
-		
-	}
-}

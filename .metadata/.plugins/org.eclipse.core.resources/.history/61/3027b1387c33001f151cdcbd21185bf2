@@ -1,9 +1,0 @@
-package core;
-//Poly-Many
-//morphism - Forms
-//method - having diff forms
-public class P014_Polymorphism {
-	public static void main(String[] args) {
-		
-	}
-}
