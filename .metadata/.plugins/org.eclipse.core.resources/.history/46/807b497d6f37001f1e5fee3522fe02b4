@@ -1,8 +1,0 @@
-package core;
-
-
-public class P019_Exception {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,0 +1,12 @@
+package core;
+class Counter{
+	
+}
+public class P029_Thread {
+	public static void main(String[] args) {
+		Thread t = new Thread();
+		System.out.println(t.currentThread());
+		t.setName("MyThread");
+		System.out.println(t);
+	}
+}

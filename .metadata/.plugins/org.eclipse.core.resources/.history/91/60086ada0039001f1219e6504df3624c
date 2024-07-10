@@ -1,7 +1,0 @@
-package core;
-
-public class P020_FileHandling {
-	public static void main(String[] args) {
-		String msg = "java is very powerful language for web development";
-	}
-}
