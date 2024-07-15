@@ -1,7 +1,0 @@
-package core;
-
-public class P023_Vector {
-	public static void main(String[] args) {
-		
-	}
-}
