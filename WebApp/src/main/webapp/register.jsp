@@ -22,7 +22,7 @@
 				<td><input type="text" name="address"></td>
 			</tr>
 			<tr>
-				<td>Email :</td> 
+				<td>Email :</td>
 				<td><input type="email" name="email"></td>
 			</tr>
 			<tr>
