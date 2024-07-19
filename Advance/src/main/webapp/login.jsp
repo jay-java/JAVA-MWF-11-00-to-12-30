@@ -19,7 +19,7 @@
 	<%
 	}
 	%>
-	<form action="UserController" method="post">
+	<form action="StudentController" method="post">
 		<table>
 			<tr>
 				<td>Email :</td>

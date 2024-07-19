@@ -3,14 +3,15 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import connection.DBConnection;
 import model.Student;
 
 public class StudentDao {
-	public static void insertStudent(Student s) {
+	public static void insertStudent(Student s) throws SQLException {
+		Connection conn = DBConnection.createConnection();
 		try {
-			Connection conn = DBConnection.createConnection();
 			String sql = "insert into student(name,contact,address,email,password) values(?,?,?,?,?)";
 			PreparedStatement pst =conn.prepareStatement(sql);
 			pst.setString(1, s.getName());
@@ -22,6 +23,9 @@ public class StudentDao {
 			System.out.println("data inserted");
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		finally {
+			conn.close();
 		}
 	}
 	public static boolean checkEmail(String email) {
@@ -39,5 +43,28 @@ public class StudentDao {
 			e.printStackTrace();
 		}
 		return flag;
+	}
+	public static Student studetnLogin(Student s) {
+		Student s1 = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from student where email=? and password=?";
+			PreparedStatement pst =conn.prepareStatement(sql);
+			pst.setString(1, s.getEmail());
+			pst.setString(2, s.getPassword());
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				s1 = new Student();
+				s1.setId(rs.getInt("id"));
+				s1.setName(rs.getString("name"));
+				s1.setContact(rs.getLong("contact"));
+				s1.setAddress(rs.getString("address"));
+				s1.setEmail(rs.getString("email"));
+				s1.setPassword(rs.getString("password"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return s1;
 	}
 }
