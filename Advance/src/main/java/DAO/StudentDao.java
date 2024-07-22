@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import connection.DBConnection;
 import model.Student;
@@ -52,6 +54,50 @@ public class StudentDao {
 			PreparedStatement pst =conn.prepareStatement(sql);
 			pst.setString(1, s.getEmail());
 			pst.setString(2, s.getPassword());
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				s1 = new Student();
+				s1.setId(rs.getInt("id"));
+				s1.setName(rs.getString("name"));
+				s1.setContact(rs.getLong("contact"));
+				s1.setAddress(rs.getString("address"));
+				s1.setEmail(rs.getString("email"));
+				s1.setPassword(rs.getString("password"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return s1;
+	}
+	public static List<Student> getAllStudents() {
+		List<Student> list = new ArrayList<Student>();
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from student";
+			PreparedStatement pst =conn.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			while(rs.next()) {
+				Student s1 =new Student();
+				s1.setId(rs.getInt("id"));
+				s1.setName(rs.getString("name"));
+				s1.setContact(rs.getLong("contact"));
+				s1.setAddress(rs.getString("address"));
+				s1.setEmail(rs.getString("email"));
+				s1.setPassword(rs.getString("password"));
+				list.add(s1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	public static Student getStudentById(int id) {
+		Student s1 = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from student where id=?";
+			PreparedStatement pst =conn.prepareStatement(sql);
+			pst.setInt(1, id);
 			ResultSet rs = pst.executeQuery();
 			if(rs.next()) {
 				s1 = new Student();

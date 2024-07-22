@@ -79,6 +79,12 @@ public class StudentController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		else if(action.equalsIgnoreCase("edit")) {
+			int id = Integer.parseInt(request.getParameter("id"));
+			Student s = StudentDao.getStudentById(id);	
+			request.setAttribute("data", s);
+			request.getRequestDispatcher("update.jsp").forward(request, response);
+		}
 	}
 
 }

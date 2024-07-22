@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="core.B"/>
     <fullyQualifiedTypeName name="core.C"/>
     <fullyQualifiedTypeName name="core.Laptop"/>
     <fullyQualifiedTypeName name="core.Child"/>
@@ -52,12 +51,13 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
     <fullyQualifiedTypeName name="model.User"/>
-    <fullyQualifiedTypeName name="controller.StudentController"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="model.Student"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="connection.DBConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="controller.StudentController"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="model.Student"/>
     <fullyQualifiedTypeName name="DAO.StudentDao"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>
