@@ -113,4 +113,33 @@ public class StudentDao {
 		}
 		return s1;
 	}
+	public static void updateStudent(Student s) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "update student set name=?,contact=?,address=?,email=?,password=? where id=?";
+			PreparedStatement pst =conn.prepareStatement(sql);
+			pst.setString(1, s.getName());
+			pst.setLong(2,s.getContact());
+			pst.setString(3, s.getAddress());
+			pst.setString(4, s.getEmail());
+			pst.setString(5, s.getPassword());
+			pst.setInt(6, s.getId());
+			pst.executeUpdate();
+			System.out.println("data updated");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void deleteStudent(int id) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "delete from student where id=?";
+			PreparedStatement pst =conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			pst.executeUpdate();
+			System.out.println("data deleted");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

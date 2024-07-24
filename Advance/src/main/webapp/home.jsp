@@ -85,7 +85,7 @@
 					</form>
 				</td>
 				<td>
-					<a href="">Delete</a>
+					<a href="StudentController?action=delete&id=<%=s1.getId()%>">Delete</a>
 				</td>
 			</tr>
 			<%} %>
