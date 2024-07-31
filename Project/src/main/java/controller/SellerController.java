@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Dao.SellerDao;
 import model.Seller;
@@ -16,45 +17,98 @@ import model.Seller;
 @WebServlet("/SellerController")
 public class SellerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public SellerController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public SellerController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String action = request.getParameter("action");
-		if(action.equalsIgnoreCase("register")) {
+		if (action.equalsIgnoreCase("register")) {
 			Seller s = new Seller();
 			s.setName(request.getParameter("name"));
 			s.setContact(Long.parseLong(request.getParameter("contact")));
 			s.setAddres(request.getParameter("address"));
 			s.setEmail(request.getParameter("email"));
-		 	s.setPass(request.getParameter("password"));
+			s.setPass(request.getParameter("password"));
 			s.setCpass(request.getParameter("confirmPassword"));
-			String pass = 	request.getParameter("password");
+			String pass = request.getParameter("password");
 			String cpass = request.getParameter("confirmPassword");
-			if(pass.equals(cpass)) {
+			if (pass.equals(cpass)) {
 				SellerDao.sellerRegister(s);
 				response.sendRedirect("s-login.jsp");
-			}
-			else {
+			} else {
 				request.setAttribute("msg", "Pass and Cpass is not matched");
 				request.getRequestDispatcher("s-regisration.jsp").forward(request, response);
+			}
+		} else if (action.equalsIgnoreCase("login")) {
+			Seller s = new Seller();
+			s.setEmail(request.getParameter("email"));
+			s.setPass(request.getParameter("password"));
+			String email = request.getParameter("email");
+			boolean flag = SellerDao.checkEmail(email);
+			if (flag == true) {
+				Seller s1 = SellerDao.sellerLogin(s);
+				if (s1 == null) {
+					request.setAttribute("msg", "password is incorrect");
+					request.getRequestDispatcher("s-login.jsp").forward(request, response);
+				} else {
+					HttpSession session = request.getSession();
+					session.setAttribute("data", s1);
+					request.getRequestDispatcher("s-home.jsp").forward(request, response);
+				}
+
+			} else {
+				request.setAttribute("msg", "Account doesn't exist");
+				request.getRequestDispatcher("s-login.jsp").forward(request, response);
+			}
+		}
+		else if(action.equalsIgnoreCase("update")) {
+			Seller s = new Seller();
+			s.setId(Integer.parseInt(request.getParameter("id")));
+			s.setName(request.getParameter("name"));
+			s.setContact(Long.parseLong(request.getParameter("contact")));
+			s.setAddres(request.getParameter("address"));
+			s.setEmail(request.getParameter("email"));
+			SellerDao.udpateSellerProfile(s);
+			HttpSession session = request.getSession();
+			session.setAttribute("data", s);
+			request.getRequestDispatcher("s-profile.jsp").forward(request, response);
+		}
+		else if(action.equalsIgnoreCase("update pass")) {
+			int id = Integer.parseInt(request.getParameter("id"));
+			String op = request.getParameter("op");
+			String np = request.getParameter("np");
+			String cnp = request.getParameter("cnp");
+			boolean flag = SellerDao.checkOldPassword(op);
+			if(flag == true) {
+				if(np.equals(cnp)) {
+					SellerDao.sellerUpdatePassword(np, id);
+					response.sendRedirect("s-home.jsp");
+				}
+				else {
+					request.setAttribute("msg", "Np and CNP not matched");
+					request.getRequestDispatcher("s-change-pass.jsp").forward(request, response);
+				}
+			}
+			else {
+				request.setAttribute("msg", "Old password is incorrect");
+				request.getRequestDispatcher("s-change-pass.jsp").forward(request, response);
 			}
 		}
 	}
