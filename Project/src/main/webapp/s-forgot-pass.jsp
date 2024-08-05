@@ -18,23 +18,17 @@
 				<%} %>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>Seller Login</h3>
+						<h3>Seller Forgot Password</h3>
 						<form class="row login_form" action="SellerController" id="contactForm" method="post">
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name" name="email"
 									placeholder="Email" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Username'">
 							</div>
-							<div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="name" name="password"
-									placeholder="Password" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Password'">
-							</div>
 							
 							<div class="col-md-12 form-group">
-								<button type="submit" value="login" name="action"
-									class="button button-login w-100">Log In</button>
-								<a href="s-forgot-pass.jsp">Forgot Password?</a>
+								<button type="submit" value="fp" name="action"
+									class="button button-login w-100">Get OTP</button>
 							</div>
 						</form>
 					</div>
