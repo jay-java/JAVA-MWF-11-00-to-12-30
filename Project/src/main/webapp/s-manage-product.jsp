@@ -56,7 +56,7 @@
 									<h5><a href="s-single-product.jsp?pid=<%=p.getPid()%>">Edit</a></h5>
 								</td>
 								<td>
-									<h5><a href="s-delete-product.jsp">Delete</a></h5>
+									<h5><a href="s-delete-product.jsp?pid=<%=p.getPid()%>">Delete</a></h5>
 								</td>
 							</tr>
 							<%} %>

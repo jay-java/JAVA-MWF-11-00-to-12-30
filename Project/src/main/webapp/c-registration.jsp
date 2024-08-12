@@ -15,7 +15,7 @@
 				<div class="col-lg-6">
 					<div class="login_form_inner register_form_inner">
 						<h3>Create an account As Customer</h3>
-						<form class="row login_form" action="#/" id="register_form">
+						<form class="row login_form" action="CustomerController" id="register_form" method="post">
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name" name="name"
 									placeholder="Username" onfocus="this.placeholder = ''"
@@ -49,8 +49,8 @@
 									onblur="this.placeholder = 'Confirm Password'">
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit"
-									class="button button-register w-100">Register</button>
+								<button type="submit" value="register"
+									 name="action" class="button button-register w-100">Register</button>
 							</div>
 						</form>
 					</div>

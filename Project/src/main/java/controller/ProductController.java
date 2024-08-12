@@ -48,30 +48,59 @@ public class ProductController extends HttpServlet {
 	    return "";
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String savePath = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";   
-		File fileSaveDir=new File(savePath);
-        if(!fileSaveDir.exists()){
-            fileSaveDir.mkdir();
-        }
-        Part file1 = request.getPart("image");
-	 	String fileName=extractfilename(file1);
-	    file1.write(savePath + File.separator + fileName);
-	    String filePath= savePath + File.separator + fileName ;
-	    
-	    String savePath2 = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";
-        File imgSaveDir=new File(savePath2);
-        if(!imgSaveDir.exists()){
-            imgSaveDir.mkdir();
-        }
-        Product p = new Product();
-        p.setSid(Integer.parseInt(request.getParameter("sid")));
-        p.setImage(fileName);
-        p.setPname(request.getParameter("pname"));
-        p.setPprice(Integer.parseInt(request.getParameter("pprice")));
-        p.setPcategory(request.getParameter("pcategory"));
-        p.setPdesc(request.getParameter("pdesc"));
-        ProductDao.uploadProduct(p);
-        response.sendRedirect("s-home.jsp");
+		String action = request.getParameter("action");
+		if(action.equalsIgnoreCase("upload")) {
+			String savePath = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";   
+			File fileSaveDir=new File(savePath);
+	        if(!fileSaveDir.exists()){
+	            fileSaveDir.mkdir();
+	        }
+	        Part file1 = request.getPart("image");
+		 	String fileName=extractfilename(file1);
+		    file1.write(savePath + File.separator + fileName);
+		    String filePath= savePath + File.separator + fileName ;
+		    
+		    String savePath2 = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";
+	        File imgSaveDir=new File(savePath2);
+	        if(!imgSaveDir.exists()){
+	            imgSaveDir.mkdir();
+	        }
+	        Product p = new Product();
+	        p.setSid(Integer.parseInt(request.getParameter("sid")));
+	        p.setImage(fileName);
+	        p.setPname(request.getParameter("pname"));
+	        p.setPprice(Integer.parseInt(request.getParameter("pprice")));
+	        p.setPcategory(request.getParameter("pcategory"));
+	        p.setPdesc(request.getParameter("pdesc"));
+	        ProductDao.uploadProduct(p);
+	        response.sendRedirect("s-home.jsp");
+		}
+		else if(action.equalsIgnoreCase("update")) {
+			String savePath = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";   
+			File fileSaveDir=new File(savePath);
+	        if(!fileSaveDir.exists()){
+	            fileSaveDir.mkdir();
+	        }
+	        Part file1 = request.getPart("image");
+		 	String fileName=extractfilename(file1);
+		    file1.write(savePath + File.separator + fileName);
+		    String filePath= savePath + File.separator + fileName ;
+		    
+		    String savePath2 = "C:\\Users\\jay-pc\\JAVA MWF 11-00 to 12-30\\Project\\src\\main\\webapp\\images";
+	        File imgSaveDir=new File(savePath2);
+	        if(!imgSaveDir.exists()){
+	            imgSaveDir.mkdir();
+	        }
+	        Product p = new Product();
+	        p.setPid(Integer.parseInt(request.getParameter("pid")));
+	        p.setImage(fileName);
+	        p.setPname(request.getParameter("pname"));
+	        p.setPprice(Integer.parseInt(request.getParameter("pprice")));
+	        p.setPcategory(request.getParameter("pcategory"));
+	        p.setPdesc(request.getParameter("pdesc"));
+	        ProductDao.updateProduct(p);
+	        response.sendRedirect("s-manage-product.jsp");
+		}
 	}
 
 }
