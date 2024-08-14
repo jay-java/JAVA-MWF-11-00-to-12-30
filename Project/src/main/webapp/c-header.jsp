@@ -1,3 +1,6 @@
+<%@page import="Dao.WishlistDao"%>
+<%@page import="model.Wishlist"%>
+<%@page import="java.util.List"%>
 <%@page import="model.Customer"%>
 <%@page import="model.Seller"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -52,7 +55,7 @@
 						id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto mr-auto">
 							<li class="nav-item active"><a class="nav-link"
-								href="s-home.jsp">Home</a></li>
+								href="c-home.jsp">Home</a></li>
 
 							<li class="nav-item submenu dropdown"><a href="#"
 								class="nav-link dropdown-toggle" data-toggle="dropdown"
@@ -60,8 +63,9 @@
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link"
 										href="s-upload-product.jsp">Cart</a></li>
+										<%List<Wishlist> wlist = WishlistDao.getWishListByCudId(s.getId()); %>
 									<li class="nav-item"><a class="nav-link"
-										href="s-manage-product.jsp">Wishlist</a></li>
+										href="c-wishlist.jsp">Wishlist (<%=wlist.size() %>)</a></li>
 								</ul></li>
 							<li class="nav-item submenu dropdown"><a href="#"
 								class="nav-link dropdown-toggle" data-toggle="dropdown"

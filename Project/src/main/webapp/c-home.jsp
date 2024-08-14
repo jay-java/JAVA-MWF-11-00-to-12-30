@@ -94,14 +94,13 @@
 							<div class="card-body">
 								<p><%=p.getPcategory() %></p>
 								<h4 class="card-product__title">
-									<a href="single-product.html"><%=p.getPname() %></a>
+									<a href="c-single-product.jsp?pid=<%=p.getPid()%>"><%=p.getPname() %></a>
 								</h4>
 								<p class="card-product__price">Rs. <%=p.getPprice() %></p>
 							</div>
 						</div>
 					</div>
 					<%} %>
-			
 			
 				</div>
 			</div>

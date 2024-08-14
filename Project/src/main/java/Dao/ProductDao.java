@@ -68,6 +68,7 @@ public class ProductDao {
 				p.setPcategory(rs.getString("pcategory"));
 				p.setImage(rs.getString("image"));
 				p.setPdesc(rs.getString("pdesc"));
+				System.out.println(p);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
