@@ -55,7 +55,7 @@
 							<a class="button primary-btn" href="WishListController?action=addtowishlist&pid=<%=p.getPid()%>&cid=<%=s.getId()%>">Add to wishlist</a>
 						</div>
 						<div class="product_count">
-							<a class="button primary-btn" href="">Add to Cart</a>
+							<a class="button primary-btn" href="CartController?action=addtocart&pid=<%=p.getPid()%>&cusid=<%=s.getId()%>">Add to Cart</a>
 						</div>
 						<div class="card_area d-flex align-items-center">
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>

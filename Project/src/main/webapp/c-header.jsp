@@ -1,3 +1,5 @@
+<%@page import="Dao.CartDao"%>
+<%@page import="model.Cart"%>
 <%@page import="Dao.WishlistDao"%>
 <%@page import="model.Wishlist"%>
 <%@page import="java.util.List"%>
@@ -62,7 +64,7 @@
 								role="button" aria-haspopup="true" aria-expanded="false">Products</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link"
-										href="s-upload-product.jsp">Cart</a></li>
+										href="c-cart.jsp">Cart</a></li>
 										<%List<Wishlist> wlist = WishlistDao.getWishListByCudId(s.getId()); %>
 									<li class="nav-item"><a class="nav-link"
 										href="c-wishlist.jsp">Wishlist (<%=wlist.size() %>)</a></li>
@@ -84,8 +86,9 @@
 							<li class="nav-item"><button>
 									<i class="ti-search"></i>
 								</button></li>
+								<%List<Cart> clist = CartDao.getCartListByCusId(s.getId()); %>
 							<li class="nav-item"><button>
-									<i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span>
+									<i class="ti-shopping-cart"></i><span class="nav-shop__circle"><%=clist.size() %></span>
 								</button></li>
 							<li class="nav-item"><a class="button button-header"
 								href="#">Buy Now</a></li>
