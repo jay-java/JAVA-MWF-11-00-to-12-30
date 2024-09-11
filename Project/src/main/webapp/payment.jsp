@@ -42,14 +42,14 @@
 				"key":"rzp_test_j01fp37VE3NWWF",
 				"amount":number,
 				"currency":"INR",
-				"name":"Umesh Sharma",	
+				"name":"Anjali Makwana",	
 				"description":"Test",
 				"order_id":RazorpayOrderId,
 				
-				"callback_url":"http://localhost:8080/Project/customer-home.jsp",
+				"callback_url":"http://localhost:8080/Project/c-home.jsp",
 				"prefill":{
-					"name":"Umesh Sharma",
-					"email":"umeshsharma.code@gmail.com",
+					"name":"Anjali Makwana",
+					"email":"AnjaliMakwana@gmail.com",
 					"contact":"9328334187"
 				},
 				"notes":{

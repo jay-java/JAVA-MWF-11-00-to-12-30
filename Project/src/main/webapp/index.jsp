@@ -6,7 +6,6 @@
 <body>
 
 	<main class="site-main">
-
 		<section class="hero-banner">
 			<div class="container">
 				<div class="row no-gutters align-items-center pt-60px">
