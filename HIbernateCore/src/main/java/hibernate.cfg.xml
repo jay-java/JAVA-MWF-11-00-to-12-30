@@ -12,5 +12,11 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
         <mapping class="com.hibernate.User"/>
+        <mapping class="OneToOne.Student"/>
+        <mapping class="OneToOne.Address"/>
+        <mapping class="OneToManyToOne.StudentData"/>
+        <mapping class="OneToManyToOne.AddressData"/>
+        <mapping class="ManyToMany.StudentD"/>
+        <mapping class="ManyToMany.Course"/>
     </session-factory>
 </hibernate-configuration>
