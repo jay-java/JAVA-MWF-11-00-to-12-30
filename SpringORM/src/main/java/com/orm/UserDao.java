@@ -10,22 +10,12 @@ public class UserDao {
 
 	private HibernateTemplate hibernateTemplate;
 
-	public UserDao() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public UserDao(HibernateTemplate hibernateTemplate) {
-		super();
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
 	public HibernateTemplate getHibernateTemplate() {
 		return hibernateTemplate;
-	}
-
-	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-		this.hibernateTemplate = hibernateTemplate;
 	}
 
 	@Transactional

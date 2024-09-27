@@ -1,5 +1,5 @@
 1.create maven webApp
-2.add tomcat
+2.add tomcat -> check that project running successfully.
 3.add dependency ->spring webmvc,spring ORM,mysql connector,hibernate core, jstl 
 4.configure dispatcher servlet in web.xml
 5.create spring configuration file
