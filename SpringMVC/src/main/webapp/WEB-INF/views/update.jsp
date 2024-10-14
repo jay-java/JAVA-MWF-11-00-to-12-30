@@ -23,10 +23,10 @@
 <body>
 	<h1 class="text-center">Hello, world!</h1>
 	<div class="container">
-	<form action="register" method="post">
+	<form action="${pageContext.request.contextPath }/register" method="post">
 			<div class="mb-3">
 			<label for="exampleInputEmail1" class="form-label">Id </label> <input
-				type="text" name="name" value="${u.id }" class="form-control" id="exampleInputEmail1"
+				type="hidden" name="id" value="${u.id }" class="form-control" id="exampleInputEmail1"
 				aria-describedby="emailHelp">
 
 		</div>

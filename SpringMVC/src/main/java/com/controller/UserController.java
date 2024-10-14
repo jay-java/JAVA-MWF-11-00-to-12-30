@@ -110,4 +110,12 @@ public class UserController {
 		m.setViewName("update");
 		return m;
 	}
+	
+	@RequestMapping(value = "delete/{id}")
+	public String deleteUser(@PathVariable("id") int id,Model m) {
+		this.dao.deleteUser(id);
+		List<User> list = this.dao.getAllUser();
+		m.addAttribute("list",list);
+		return "home";
+	}
 }

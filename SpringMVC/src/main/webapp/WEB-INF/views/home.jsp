@@ -49,6 +49,10 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<div class="text-center">
+		<h1><a href="${pageContext.request.contextPath }/">Add user</a></h1>
+	</div>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
