@@ -19,6 +19,7 @@ import com.rest.model.User;
 import com.rest.service.UserService;
 
 @RestController
+@RequestMapping("/users")
 public class UserController {
 	
 	@Autowired
@@ -61,5 +62,13 @@ public class UserController {
 	public void deleteUser(@PathVariable("id") int id) {
 		this.userService.deleteUser(id);
 	}
+	
+	@PostMapping("/addProduct")
+	public String postMethodName(@RequestBody String entity) {
+		//TODO: process POST request
+		
+		return entity;
+	}
+	
 	
 }
